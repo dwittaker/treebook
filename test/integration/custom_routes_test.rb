@@ -19,4 +19,9 @@ get '/register'
 assert_response :success
 
   end
+
+  test "that a profile page works" do
+  		get '/dwittaker'
+  		assert_response :success
+  end 
 end

@@ -5,3 +5,9 @@ dee:
   profile_name: "dwittaker"
   #password: "xxxxxxx"
   #password_confirmation: "xxxxxxx"
+
+dj:
+  first_name: "DJ"
+  last_name: "Witt"
+  email: "dj@dw.com"
+  profile_name: "djwitt"
