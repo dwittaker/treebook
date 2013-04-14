@@ -20,8 +20,21 @@
 </div>
 
 
-<div class="container">
-	<%= yield %>
+<div class="container-fluid">
+
+	<div class="row_fluid">
+	<div class="span2">
+		Hello there
+	</div>
+	<div class="span10">
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+
+		<%= yield %>
+	</div>
 </div>
+</div>
+
+
 </body>
 </html>
