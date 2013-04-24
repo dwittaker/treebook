@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
- 
-  content: MyText
-  user: dee
-two:
-  
+  id: 1
   content: MyText
   user: dee
 
+two:
+  id: 2
   content: MyText
-  user: djwitt
+  user: dee
+
+three:
+  id: 3
+  content: MyText
+  user: dj

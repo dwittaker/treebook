@@ -6,6 +6,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
+
     get :index
     assert_response :success
     assert_not_nil assigns(:statuses)
@@ -70,6 +71,20 @@ sign_in users(:dee)
     sign_in users(:dee)
     put :update, id: @status, status: { content: @status.content }
     assert_redirected_to status_path(assigns(:status))
+  end
+
+  test "should update status for current user when logged in" do
+    sign_in users(:dee)
+    put :update, id: @status, status: { content: @status.content, user_id: users(:dj).id  }
+    assert_redirected_to status_path(assigns(:status))
+    assert_equal assigns(:status).user_id, users(:dee).id   
+  end
+
+  test "should not update the status if nothing has changed" do
+    sign_in users(:dee)
+    put :update, id: @status
+    assert_redirected_to status_path(assigns(:status))
+    assert_equal assigns(:status).user_id, users(:dee).id   
   end
 
   test "should destroy status" do
