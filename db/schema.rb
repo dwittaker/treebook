@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20130414003158) do
 
   create_table "statuses", :force => true do |t|
-    t.string   "name"
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
