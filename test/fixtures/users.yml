@@ -1,19 +1,24 @@
-dee:
-  first_name: "Dee"
-  last_name: "Witty"
-  email: "deew@xmail.com"
-  profile_name: "dwittaker"
-  #password: "xxxxxxx"
-  #password_confirmation: "xxxxxxx"
+jason:
+  first_name: "Jason"
+  last_name: "Seifer"
+  email: "jason@teamtreehouse.com"
+  profile_name: "jasonseifer"
+  encrypted_password: "$2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq"
 
-dj:
-  first_name: "DJ"
-  last_name: "Witt"
-  email: "dj@dw.com"
-  profile_name: "djwitt"
+jim:
+  first_name: "Jim"
+  last_name: "Hoskins"
+  email: "jim@teamtreehouse.com"
+  profile_name: "jimhoskins"
 
 mike:
   first_name: "Mike"
   last_name: "The Frog"
   email: "mike@teamtreehouse.com"
   profile_name: "mikethefrog"
+
+blocked_friend:
+  first_name: 'Blocked'
+  last_name: 'Friend'
+  email: 'blocked@teamtreehouse.com'
+  profile_name: 'youblockedme'

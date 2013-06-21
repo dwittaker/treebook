@@ -7,49 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<a href="#" class="brand">TreeBook</a>
-			<ul class="nav">
-				<li><%= link_to "All Statuses",feed_path %></li>
-			</ul>
-			<ul class="nav pull-right">
-				<% if user_signed_in? %>
-					<li><%= link_to current_user.full_name, edit_user_registration_path  %></li>
-					<li><%= link_to "Log Out", logout_path %>
-				<% else %>
-					<li><%= link_to "Register", register_path  %></li>
-					<li><%= link_to "Login", login_path  %></li>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="#" class="brand"> Treebook</a>
+				<ul class="nav">
+					<li><%= link_to "All Statuses", feed_path %></li>
+				</ul>
+				<ul class="nav pull-right">
+					<% if user_signed_in? %>
+						<li><%= link_to 'Friends', user_friendships_path %></li>
+						<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
+						<li><%= link_to "Log Out", logout_path %></li>
+					<% else %>
+						<li><%= link_to "Register", register_path %></li>
+						<li><%= link_to "Log in", login_path %></li>
+					<% end %>
 
-				<% end %>
-			</ul>
+				</ul>
+			</div>
 		</div>
-	
-	</div>	
-</div>
-
-
-<div class="container-fluid">
-
-	<div class="row_fluid">
-	<div class="span2">
-		Hello there
 	</div>
-	<div class="span10">
+	<div class="container">
 		<% flash.each do |type, message| %>
 			<div class="alert <%= flash_class type %>">
-				<button class="close" data-dismiss="alert">x</button>
+				<button class="close" data-dismiss="alert">×</button>
 				<%= message %>
 			</div>
 		<% end %>
-		
-		
+		    
 		<%= yield %>
 	</div>
-</div>
-</div>
-
-
 </body>
 </html>
